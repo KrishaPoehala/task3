@@ -1,1 +1,8 @@
-<p>book-list works!</p>
+
+<button class="btn btn-outline-secondary">All</button>
+<button class="btn btn-outline-secondary">Recommended</button>
+<div class="row border border-dark d-flex flex-wrap justify-content-between p-3">
+    <div *ngFor="let bookF of books" class="col-6">
+        <app-book-list-item [book]="bookF"></app-book-list-item>
+    </div>
+</div>
