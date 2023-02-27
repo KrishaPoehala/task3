@@ -1,0 +1,13 @@
+.book-list-container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 33vh;
+}
+
+.all{
+    border-bottom: none;
+}
+
+.recommended{
+    border-bottom: none;
+}

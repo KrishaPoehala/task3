@@ -1,0 +1,10 @@
+
+<button class="btn btn-outline-secondary all" (click)="getAll()">All</button>
+<button class="btn btn-outline-secondary recommended" (click)="getRecommended()">Recommended</button>
+<div class="row border border-dark d-flex flex-wrap justify-content-center p-3 book-list-container">
+    <div class="row border border-dark d-flex flex-wrap justify-content-center">
+        <div *ngFor="let bookF of displayedBooks | async" class="col-5">
+            <app-book-list-item [book]="bookF"></app-book-list-item>
+        </div>
+    </div>
+</div>

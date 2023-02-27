@@ -4,10 +4,8 @@
 
 export const environment = {
   production: false,
-  getBooks: "https://localhost:7079/api/Books?opt=Title",
-  getBookDetails : "https://localhost:7079/api/Books/",
-  postBook:"https://localhost:7079/api/Books/save",
-  getRecommendedBooks : "https://localhost:7079/api/Books/recommended",
+  api:'https://localhost:7079/api/',
+  gyazoAccessToken: "pFhYP7Ke_VKSLEfG3PFUsBcmCZffUYJdKaROd_1Ws1k",
 };
 
 /*

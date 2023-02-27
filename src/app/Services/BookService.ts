@@ -6,24 +6,25 @@ import { HttpClient } from '@angular/common/http';
 import { BookDto } from "../Dtos/BookDto";
 
 @Injectable()
-export class BookService{
+export class HttpService{
 
     constructor(private http : HttpClient)
     {}
 
     public getBooks(){
-        return this.http.get<BookDto[]>(environment.getBooks);
+        return this.http.get<BookDto[]>(environment.api + 'Books?opt=Title');
     }
 
     public getBookDetails(id : number){
-        return this.http.get<BookDetailsDto>(environment.getBookDetails + id)
+        return this.http.get<BookDetailsDto>(environment.api + `Books/${id}`);
     }
 
     public postBook(dto : NewBookDto){
-        return this.http.post(environment.postBook, dto);
+        console.log('SAVING A BOOK');
+        return this.http.post(environment.api + 'Books/save', dto);
     }
 
     public getRecommendedBooks(){
-        return this.http.get<BookDto[]>(environment.getRecommendedBooks);  
+        return this.http.get<BookDto[]>(environment.api + 'Books/recommended?genre=omnis');  
     }
 }
